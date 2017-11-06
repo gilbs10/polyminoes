@@ -28,8 +28,8 @@ def draw_poly(cr,poly,x_shift,y_shift, main_color, perimeter_color,cell_size= 5)
 	for p in poly:
 		draw_cell(cr,x_shift+cell_size*(p[0]-min_x),y_shift+cell_size*(max_y-p[1]),cell_size,main_color)
 
-def draw_poly_list(poly_list,name,main_color = "black",perimeter_color="red", tabular = True):
-	cols = 4.0 if tabular else 1.0
+def draw_poly_list(poly_list,name,main_color = "black",perimeter_color="red"):
+	cols = 4.0
 	poly_size = 100
 	margin = 50
 	n = len(poly_list)
@@ -37,5 +37,5 @@ def draw_poly_list(poly_list,name,main_color = "black",perimeter_color="red", ta
 	ps = cairo.PDFSurface(name+".pdf", cols*poly_size+2*margin	, rows*poly_size+2*margin)
 	cr = cairo.Context(ps)
 	for i,poly in enumerate(poly_list):
-		r,c = divmod(i,cols) if tabular else 0,0
+		r,c = divmod(i,cols)
 		draw_poly(cr,poly,c*poly_size+margin,r*poly_size+margin, main_color, perimeter_color)

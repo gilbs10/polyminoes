@@ -55,7 +55,7 @@ if __name__ == "__main__":
             if cur_p == min_p:
                 min_polys.append(p)
         print('\r',i+1,min_p,len(min_polys))
-        draw_poly_list(min_polys,"min_poly_"+str(i+1))
+        draw_poly_list(min_polys,"min_poly_"+str(i+1),"black","red")
         # for p in min_polys:
         #   print(p)
 
