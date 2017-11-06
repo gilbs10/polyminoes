@@ -4,7 +4,7 @@ from utils import *
 
 if __name__ == "__main__":
 
-    n = 16
+    n = 5
     tried = set([])
     untried = set([(0,0)])
     poly = []
