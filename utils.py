@@ -4,7 +4,7 @@ def is_legal_and_untried(c,tried,untried):
         return False
     else:
         return c[1] > 0 or (c[1] == 0 and c[0] >=0)
-
+# demo
 def get_legal_neighbors(c,tried = {},untried = {}):
     x = c[0]
     y = c[1]
